@@ -1,0 +1,28 @@
+﻿spring:
+  profiles:
+    active:
+      - dev
+---
+server:
+  port: 8201
+spring:
+  profiles: dev
+  application:
+    name: microservice-config-client
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://192.168.1.27:7001/eureka/,http://192.168.1.27:7002/eureka/,http://192.168.1.27:7003/eureka/
+---
+server:
+  port: 8202
+spring:
+  profiles: test
+  application:
+    name: microservice-config-client 
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://192.168.1.27:7001/eureka/,http://192.168.1.27:7002/eureka/,http://192.168.1.27:7003/eureka/
+
+
