@@ -3,4 +3,4 @@
   application:
     name: microservice-config-client-test 
     
-age: 60
+age: 70
